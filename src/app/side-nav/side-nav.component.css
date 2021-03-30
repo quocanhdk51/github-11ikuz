@@ -10,7 +10,7 @@
   padding-top: 60px; /* Place content 60px from the top */
   /* transition: width 0.5s; 0.5 second transition effect to slide in the sidenav */
   text-align: center;
-  transition: width 1s;
+  transition: width 0.5s;
 }
 
 .sidenav--mobile {
@@ -23,17 +23,20 @@
 
 .sidenav--open {
   width: 100%;
-  transition: width 1s;
+  transition: width 0.5s;
 }
 
 .sidenav sidenav-item {
   padding: 8px 8px 8px 32px;
-  text-decoration: none;
   display: block;
   transition: 0.3s;
   text-align: center;
   justify-content: center;
   align-items: center;
+}
+
+.sidenav .sidenav-item a {
+  text-decoration: none;
 }
 
 .sidenav .sidenav-item:hover {
@@ -135,6 +138,7 @@
 
   .main {
     margin-right: 0px;
+    margin-left: 44px;
   }
 
   .main--open {

@@ -18,32 +18,44 @@
     </ng-template>
   </div>
   <div class="sidenav-item">
-    <mat-icon class="sidenav-item-icon">home</mat-icon>
-    <span class="sidenav-item-text">Home</span>
+    <a routerLink="/">
+      <mat-icon class="sidenav-item-icon">home</mat-icon>
+      <span class="sidenav-item-text">Home</span>
+    </a>
   </div>
   <div class="sidenav-item">
-    <mat-icon class="sidenav-item-icon">info</mat-icon>
-    <span class="sidenav-item-text">About</span>
+    <a routerLink="/about">
+      <mat-icon class="sidenav-item-icon">info</mat-icon>
+      <span class="sidenav-item-text">About</span>
+    </a>
   </div>
   <div class="sidenav-item">
-    <mat-icon class="sidenav-item-icon">support_agent</mat-icon>
-    <span class="sidenav-item-text">Services</span>
+    <a routerLink="/services">
+      <mat-icon class="sidenav-item-icon">support_agent</mat-icon>
+      <span class="sidenav-item-text">Services</span>
+    </a>
   </div>
   <div class="sidenav-item">
-    <mat-icon class="sidenav-item-icon">work</mat-icon>
-    <span class="sidenav-item-text">Clients</span>
+    <a routerLink="/clients">
+      <mat-icon class="sidenav-item-icon">work</mat-icon>
+      <span class="sidenav-item-text">Clients</span>
+    </a>
   </div>
   <div class="sidenav-item">
-    <mat-icon class="sidenav-item-icon">call</mat-icon>
-    <span class="sidenav-item-text">Contact</span>
+    <a routerLink="/contact">
+      <mat-icon class="sidenav-item-icon">call</mat-icon>
+      <span class="sidenav-item-text">Contact</span>
+    </a>
   </div>
   <div class="sidenav-item profile">
-    <mat-icon class="sidenav-item-icon">account_box</mat-icon>
-    <span class="sidenav-item-text">Profile</span>
+    <a routerLink="/signin">
+      <mat-icon class="sidenav-item-icon">account_box</mat-icon>
+      <span class="sidenav-item-text">Profile</span>
+    </a>
   </div>
 </div>
 <div id="opacity" (click)="toggleNav()"></div>
 <!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
 <div id="main" class="main">
-  <!-- <app-top-nav [openNav]="openNav" [closeNav]="closeNav"></app-top-nav> -->
+  <router-outlet></router-outlet>
 </div>
