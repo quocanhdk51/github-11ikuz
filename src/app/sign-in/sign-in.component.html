@@ -45,11 +45,31 @@
   </div>
 </div> -->
 <div class="container">
-  <div class="slide-container">
-    <div class="main1" [ngStyle]="{'width' : isSlide ? '60%' : '0'}"></div>
-    <div class="slider">
-      <button (click)="isSlide = !isSlide">slide</button>
+  <div class="background-container">
+    <div class="background-part-1">
+      <div class="background-header">
+        <div class="background-header-title">Welcome Back</div>
+        <div class="background-header-desc">Please give me the info. Me dont bite ehe!</div>
+      </div>
     </div>
-    <div class="main2" [ngStyle]="{'width' : isSlide ? '0' : '60%'}"></div>
+    <div class="background-part-2"></div>
+    <div class="background-part-3">
+      <div class="background-header">
+        <div class="background-header-title">Hi, Friend!</div>
+        <div class="background-header-desc">Join us and enjoy
+          the crazies!!</div>
+      </div>
+    </div>
+  </div>
+  <div class="slide-container">
+    <div [ngClass]="{'main1': true, 'main-1-half': isHalfSlide, 'main-1-full': isSlide}">
+    </div>
+    <div class="slider" [ngStyle]="{'width': (isHalfSlide) ? '50%' : '40%'}">
+      <div class="slider-body">
+        <div class="slider-btn" (click)="toggleSwitch()"> Switch</div>
+      </div>
+    </div>
+    <div [ngClass]="{'main2': true, 'main-2-half': isHalfSlide, 'main-2-full': isSlide}">
+    </div>
   </div>
 </div>

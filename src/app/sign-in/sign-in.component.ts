@@ -7,6 +7,17 @@ import { Component, OnInit } from "@angular/core";
 })
 export class SignInComponent implements OnInit {
   isSlide: boolean = false;
+  isHalfSlide: boolean = false;
+
+  toggleSwitch(): void {
+    if (this.isSlide) {
+      this.isSlide = false;
+      setTimeout(() => (this.isHalfSlide = false), 500);
+    } else {
+      this.isHalfSlide = true;
+      setTimeout(() => (this.isSlide = true), 500);
+    }
+  }
 
   constructor() {}
 
