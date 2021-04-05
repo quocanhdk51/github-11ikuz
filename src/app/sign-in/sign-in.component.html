@@ -63,13 +63,19 @@
   </div>
   <div class="slide-container">
     <div [ngClass]="{'main1': true, 'main-1-half': isHalfSlide, 'main-1-full': isSlide}">
+      <div class="form">
+        Testing Text that is so fucking long that it run out of the container
+      </div>
     </div>
-    <div class="slider" [ngStyle]="{'width': (isHalfSlide) ? '50%' : '40%'}">
+    <div class="slider" [ngStyle]="{'width': (isHalfSlide && !isSlide) ? '50%' : '40%'}">
       <div class="slider-body">
         <div class="slider-btn" (click)="toggleSwitch()"> Switch</div>
       </div>
     </div>
     <div [ngClass]="{'main2': true, 'main-2-half': isHalfSlide, 'main-2-full': isSlide}">
+      <div class="form">
+        Testing Text that is so fucking long that it run out of the container
+      </div>
     </div>
   </div>
 </div>

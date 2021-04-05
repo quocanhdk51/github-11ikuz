@@ -242,6 +242,10 @@ input[type="submit"] {
   -webkit-transition: 1s;
   transition: 1s;
   background-color: white;
+  overflow: hidden;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
 }
 
 .main-1-half {
@@ -258,6 +262,10 @@ input[type="submit"] {
   -webkit-transition: 1s;
   transition: 1s;
   background-color: white;
+  overflow: hidden;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
 }
 
 .main-2-half {
@@ -266,4 +274,14 @@ input[type="submit"] {
 
 .main-2-full {
   width: 0;
+}
+
+.form {
+  background-color: red;
+  left: 20px;
+  right: 20px;
+  align-self: center;
+  height: 100%;
+  width: 500px;
+  position: relative;
 }
