@@ -1,4 +1,4 @@
-<div class="container">
+<!-- <div class="container">
   <div class="slide-container">
     <div class="slide">
       <div class="signup-btn">Signup</div>
@@ -42,5 +42,14 @@
         <input class="signin-btn" type="submit" value="Signin">
       </div>
     </div>
+  </div>
+</div> -->
+<div class="container">
+  <div class="slide-container">
+    <div class="main1" [ngStyle]="{'width' : isSlide ? '60%' : '0'}"></div>
+    <div class="slider">
+      <button (click)="isSlide = !isSlide">slide</button>
+    </div>
+    <div class="main2" [ngStyle]="{'width' : isSlide ? '0' : '60%'}"></div>
   </div>
 </div>
