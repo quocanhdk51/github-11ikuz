@@ -17,10 +17,11 @@ import { ServicesComponent } from './services/services.component';
 import { ClientsComponent } from './clients/clients.component';
 import { ContactComponent } from './contact/contact.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { DebounceClickDirective } from './debounce-click.directive';
 
 
 @NgModule({
-  declarations: [AppComponent, SideNavComponent, TopNavComponent, SignUpComponent, SignInComponent, HomeComponent, AboutComponent, ServicesComponent, ClientsComponent, ContactComponent, PageNotFoundComponent],
+  declarations: [AppComponent, SideNavComponent, TopNavComponent, SignUpComponent, SignInComponent, HomeComponent, AboutComponent, ServicesComponent, ClientsComponent, ContactComponent, PageNotFoundComponent, DebounceClickDirective],
   imports: [
     BrowserModule,
     AppRoutingModule,

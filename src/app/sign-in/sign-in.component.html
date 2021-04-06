@@ -1,80 +1,154 @@
-<!-- <div class="container">
-  <div class="slide-container">
-    <div class="slide">
-      <div class="signup-btn">Signup</div>
-    </div>
-    <div class="form-container">
-      <div class="section">
-        <div class="row">
-          <label for="username">
-            Username
-          </label>
-        </div>
-        <div class="row">
-          <input type="text" id="username" name="username" placeholder="Your username..">
-        </div>
-      </div>
-      <div class="section">
-        <div class="row">
-          <label for="password">
-            Password
-          </label>
-        </div>
-        <div class="row">
-          <input type="text" id="password" name="password" placeholder="Your password..">
-        </div>
-      </div>
-      <div class="section">
-        <div class="row">
-          <label for="server">
-            Server
-          </label>
-        </div>
-        <div class="row">
-          <select id="server" name="server">
-            <option value="australia">Australia</option>
-            <option value="canada">Canada</option>
-            <option value="usa">USA</option>
-          </select>
-        </div>
-      </div>
-      <div class="section">
-        <input class="signin-btn" type="submit" value="Signin">
-      </div>
-    </div>
-  </div>
-</div> -->
 <div class="container">
   <div class="background-container">
     <div class="background-part-1">
       <div class="background-header">
         <div class="background-header-title">Welcome Back</div>
-        <div class="background-header-desc">Please give me the info. Me dont bite ehe!</div>
+        <div class="background-header-desc">
+          Please give me the info. Me dont bite ehe!
+        </div>
       </div>
     </div>
     <div class="background-part-2"></div>
     <div class="background-part-3">
       <div class="background-header">
         <div class="background-header-title">Hi, Friend!</div>
-        <div class="background-header-desc">Join us and enjoy
-          the crazies!!</div>
+        <div class="background-header-desc">
+          Join us and enjoy the crazies!!
+        </div>
       </div>
     </div>
   </div>
   <div class="slide-container">
-    <div [ngClass]="{'main1': true, 'main-1-half': isHalfSlide, 'main-1-full': isSlide}">
-      <div class="form">
-        Sign In!
+    <div
+      [ngClass]="{'main1': true, 'main-1-half': isHalfSlide, 'main-1-full': isSlide}"
+    >
+      <div class="form-container">
+        <div class="header transparent-text">
+          Sign In
+        </div>
+        <div class="form">
+          <form>
+            <div class="section">
+              <div class="row social-login">
+                <div class="facebook-container">
+                  Sign in with Facebook
+                </div>
+                <div class="google-container">
+                  Sign in with
+                  <span style="color:#4285f4">G</span>
+                  <span style="color:#ee4335">o</span>
+                  <span style="color:#fbbc05">o</span>
+                  <span style="color:#4285f4">g</span>
+                  <span style="color:#34a853">l</span>
+                  <span style="color:#ee4335">e</span>
+                </div>
+              </div>
+            </div>
+            <div class="section">
+              <div class="row transparent-text">
+                <label for="id">Email</label>
+              </div>
+              <div class="row">
+                <input
+                  type="text"
+                  id="email"
+                  name="email"
+                  placeholder="Email.."
+                />
+              </div>
+            </div>
+            <div class="section">
+              <div class="row transparent-text">
+                <label for="role">Password</label>
+              </div>
+              <div class="row">
+                <input
+                  type="text"
+                  id="password"
+                  name="password"
+                  placeholder="Password.."
+                />
+              </div>
+            </div>
+            <div class="section">
+              <div class="row btn-container">
+                <div class="submit-btn">SIGN IN</div>
+              </div>
+            </div>
+          </form>
+        </div>
       </div>
     </div>
-    <div class="slider" [ngStyle]="{'width': (isHalfSlide && !isSlide) ? '50%' : '40%'}">
+    <div
+      class="slider"
+      [ngStyle]="{'width': (isHalfSlide && !isSlide) ? '50%' : '40%'}"
+    >
       <div class="slider-body">
-        <div class="slider-btn" (click)="toggleSwitch()"> Switch</div>
+        <div
+          class="slider-btn"
+          appDebounceClick
+          (debounceClick)="toggleSwitch()"
+          [debounceTime]="800"
+        >
+          Switch
+        </div>
       </div>
     </div>
-    <div [ngClass]="{'main2': true, 'main-2-half': isHalfSlide, 'main-2-full': isSlide}">
-      <div class="form">
-        Create Account
+    <div
+      [ngClass]="{'main2': true, 'main-2-half': isHalfSlide, 'main-2-full': isSlide}"
+    >
+      <div class="form-container">
+        <div class="header transparent-text">
+          Create Account
+        </div>
+        <div class="form">
+          <form>
+            <div class="section">
+              <div class="row transparent-text">
+                <label for="id">Username</label>
+              </div>
+              <div class="row">
+                <input
+                  type="text"
+                  id="username"
+                  name="username"
+                  placeholder="Username.."
+                />
+              </div>
+            </div>
+            <div class="section">
+              <div class="row transparent-text">
+                <label for="id">Email</label>
+              </div>
+              <div class="row">
+                <input
+                  type="text"
+                  id="email"
+                  name="email"
+                  placeholder="Email.."
+                />
+              </div>
+            </div>
+            <div class="section">
+              <div class="row transparent-text">
+                <label for="role">Password</label>
+              </div>
+              <div class="row">
+                <input
+                  type="text"
+                  id="password"
+                  name="password"
+                  placeholder="Password.."
+                />
+              </div>
+            </div>
+            <div class="section">
+              <div class="row btn-container">
+                <div class="submit-btn">SIGN UP</div>
+              </div>
+            </div>
+          </form>
+        </div>
       </div>
     </div>
   </div>
